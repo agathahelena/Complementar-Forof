@@ -14,13 +14,14 @@
     let consoantes = [];
 
     for (const item of Array.from(palavra) ) {
-        if(item == "a" || item == "e" || item == "i" || item == "o" || item == "u");{
-            vogal.push(item)
-        };
-        else {
+        if(item == "a" || item == "e" || item == "i" || item == "o" || item == "u"){
+            vogal.push(item);
+         }
+         else{
             consoantes.push(item)
-        };
+         }
     }
-
     //Saída
+    
+    document.write(`quantidade de vogais : ${vogal.length} <br> quantidade de consoantes : ${consoantes.length} `);
 </script>
