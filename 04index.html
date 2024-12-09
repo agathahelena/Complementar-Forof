@@ -9,12 +9,14 @@
     //Entrada
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
-    let acento  = [];
+    let semAcento  = [];
 
     //Processamento
-
     for (const item of nomes) {
-       
+        semAcento.push ( item.normalize("NFD"));   
     }
+
+    
     //Saída
+    document.write(`${semAcento}`);
 </script>

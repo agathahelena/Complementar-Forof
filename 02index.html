@@ -8,10 +8,16 @@
     //Entrada
 
     const notasAluno = [7, 5, 9, 8];
+    let media = 0;
 
     //Processamento
+    notasAluno.sort((a,b) => a -b );
+
     for (const item of notasAluno) {
-        
+      media += item; 
     }
+    media = media/notasAluno.length;
+
     //Saída
+    document.write(`Sua maior nota foi : ${notasAluno[3]} <br> Sua menor nota foi : ${notasAluno[0]} <br> Sua média foi : ${media}`);
 </script>
