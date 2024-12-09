@@ -7,6 +7,23 @@
     Apresente as cores preferidas e a quantidade de cores que o usuário gosta.
     */
     //Entrada
+
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+
+    let gosta = [];
+
     //Processamento
+    for (const item of cores) {
+
+        const pergunta = prompt(`qual das cores da lista você gosta : Branco, Azul, Marrom, Cinza, Verde, Amarelo, Vermelho, Preto`);
+
+        if (pergunta == "Branco" || pergunta == "Azul" || pergunta == "Marrom" || pergunta == "Cinza" || pergunta == "Verde" || pergunta == "Amarelo" || pergunta == "Vermelho" || pergunta == "Preto" ) {
+            gosta.push(pergunta);
+        }
+    }
+
     //Saída
+
+    document.write(`sua cor favorita é ${gosta} <br> O tamanho da lista é ${gosta.length}`);
+
 </script>
