@@ -20,16 +20,66 @@
     //Processamento
 
     for (const item of cidades) {
-      const pergunta = prompt (`a qual estado pertence essa cidade`);
-      if(pergunta == "Santa Catarina"){
-      SantaCatarina.push
-    }
-    if(pergunta == "Párana"){
-      Parana.push
-    }
-    if(pergunta == "Rio Grande do Sul"){
-      RioGrande.push
-    }
+      const pergunta = prompt (`a qual estado pertence essa cidade ${item}`);
+     switch(pergunta){
+      case "SC" :
+        SantaCatarina.push(item);
+        break;
+
+        case "PR" : 
+        Parana.push(item);
+        break;
+
+        case "RS" : 
+        RioGrande.push(item);
+        break;
+     }
 }
+
+
     //Saída
+
+    if(SantaCatarina.length > RioGrande.length && RioGrande.length >  Parana.length){
+      document.write(`
+        cidades de SC : ${SantaCatarina.join(" ,")}
+        cidades de RS : ${RioGrande.join(" ,")}
+        cidades de PR : ${Parana.join(" ,")}
+      `);
+    }
+   else if(SantaCatarina.length > Parana.length &&  Parana.length > RioGrande.length){
+      document.write(`
+        cidades de SC : ${SantaCatarina.join(" ,")} <br>
+        cidades de RS : ${Parana.join(" ,")} <br>
+        cidades de PR : ${RioGrande.join(" ,")}<br>
+      `);
+    }
+    else if(Parana.length > RioGrande.length &&  RioGrande.length > SantaCatarina.length){
+      document.write(`
+        cidades de PR : ${Parana.join(" ,")} <br>
+        cidades de RS : ${RioGrande.join(" ,")} <br>
+        cidades de SC : ${SantaCatarina.join(" ,")}<br>
+      `);
+    }
+    else if(Parana.length > SantaCatarina.length &&  SantaCatarina.length > RioGrande.length){
+      document.write(`
+        cidades de PR : ${Parana.join(" ,")} <br>
+        cidades de SC : ${SantaCatarina.join(" ,")} <br>
+        cidades de RS : ${RioGrande.join(" ,")}<br>
+      `);
+    }
+    else if(RioGrande.length > Parana.length &&  Parana.length > SantaCatarina.length){
+      document.write(`
+        cidades de RS : ${RioGrande.join(" ,")} <br>
+        cidades de PR : ${Parana.join(" ,")} <br>
+        cidades de SC : ${SantaCatarina.join(" ,")}<br>
+      `);
+    }
+    else if(RioGrande.length > SantaCatarina.length &&  SantaCatarina.length > Parana.length){
+      document.write(`
+        cidades de RS : ${RioGrande.join(" ,")} <br>
+        cidades de SC : ${SantaCatarina.join(" ,")} <br>
+        cidades de PR : ${Parana.join(" ,")}<br>
+      `);
+    }
+
 </script>
