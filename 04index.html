@@ -12,11 +12,16 @@
     let semAcento  = [];
 
     //Processamento
+
+    function removerAcentos(texto) {
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
     for (const item of nomes) {
-        semAcento.push ( item.normalize("NFD"));   
+       semAcento.push(removerAcentos(item));
     }
 
     
     //Saída
-    document.write(`${semAcento}`);
+    document.write(`${semAcento.join(" ,")}`);
 </script>

@@ -11,14 +11,20 @@
     //Processamento
 
     let numero = [];
+    let letra =[];
+
     let soma = 0 
 
-    lista.sort((a,b)=> a-b);
-
     for (const item of lista) {
-        
+        if ( item * 1 == item ){
+        soma = item + soma;
+        numero.push(item);
+        }
+        else{
+            letra.push(item);
+        }
     }
     //Saída
 
-    document.write(`${lista}`);
+    document.write(`O resultado: ${numero.join(" + ")} = ${soma}.`);
 </script>
